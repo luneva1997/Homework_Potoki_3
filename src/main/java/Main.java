@@ -17,9 +17,9 @@ public class Main {
             texts[i] = generateText("abc", 3 + random.nextInt(3));
         }
 
-        Future<AtomicInteger> task1 = executor.submit(new myCallable(3, words3, texts));
-        Future<AtomicInteger> task2 = executor.submit(new myCallable(4, words4, texts));
-        Future<AtomicInteger> task3 = executor.submit(new myCallable(5, words5, texts));
+        Future<AtomicInteger> task1 = executor.submit(new MyCallable(3, words3, texts));
+        Future<AtomicInteger> task2 = executor.submit(new MyCallable(4, words4, texts));
+        Future<AtomicInteger> task3 = executor.submit(new MyCallable(5, words5, texts));
         task1.get();
         task2.get();
         task3.get();
